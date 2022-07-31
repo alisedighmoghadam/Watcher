@@ -2,7 +2,7 @@
 
 # Watcher
 
-A simple subscription streaming service replica. Personal project.
+A simple subscription streaming service replica. Personal project. (In developing process)
 
 # Screenshots
 
