@@ -1,4 +1,5 @@
 import React from 'react'
+import '../css/navbar.css'
 import { useEffect } from 'react';
 import { useState } from 'react'
 
@@ -8,6 +9,7 @@ const Navbar = () => {
     var [windowWidth,setWindowWidth]=useState(window.innerWidth);
     var [mobileView,setMobileView]=useState(false);
     var [showPopUp,setPopUp]=useState(false);
+    var [showDeskPopUp,setDeskPopUp]=useState(false);
     useEffect(()=>{
         function handleWindowResize() {
             setWindowWidth(window.innerWidth);
@@ -28,6 +30,9 @@ const Navbar = () => {
     },[windowWidth])
     function showMenu(){
         setPopUp(!showPopUp);
+    }
+    function showDeskMenu(){
+        setDeskPopUp(!showDeskPopUp)
     }
     
     if(mobileView){
@@ -55,21 +60,45 @@ const Navbar = () => {
                 
                 </div>    
                 <div id='popup-menu'className={showPopUp?'show-popup':''}>
-                    <div className='navbar-login float-end'>
-                            <p>Sign in</p>
-        
+                    <div className='container-fluid mobile-popup '>
+                        <div className='row'>
+                            <div className='col mobile-login-section'>
+                                <h3>Email</h3>
+                                <input type="email" name='email-login' id='email-login' />
+                                <h3>Password</h3>
+                                <input type="password" name="password-login" id="password-login" />
+                                <button>Sign in</button>
+                            </div>
+                            <div className='col mobile-sign-up-section'>
+                                <h3>You don't have account yet? </h3>
+                                <a href=""><button>Sign up</button></a>
+                            </div>
+                            
                         </div>
-                        <div className='navbar-search float-end'>
+                        <hr />
+                        <div className='row mobile-search-section'>
+                            <div className='col container-fluid'>
+                                <h2>Looking for something? </h2>
+                                <div className='navbar-search-mobile float-end'>
         
-                            <input type="text" name='search' id='search-input'/>
-                            <img src={searchImgPath} alt="" />
+                                    <input type="text" name='search' id='search-input'/>
+                                    <img src={searchImgPath} alt="" />
+                                </div>
+                                
+                            </div>
+                            
                         </div>
+                    </div>
+                    
                 </div>
             </div>
             
         )
     }else{
         return (
+            <div>
+
+            
             <div id='navbar' className='container-fluid justify-content-md-center d-flex' >
                 <div className='col-sm-1 container-fluid'>
                     <div  className='main-logo col'>
@@ -87,13 +116,36 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className='col-sm-1 navbar-login-container'>
-                        <div className='navbar-login float-end'>
+                        <button className='navbar-login float-end' onClick={showDeskMenu}>
                             <p>Sign in</p>
         
-                        </div>
+                        </button>
                     </div>
+                    
                 </div>
                 
+            </div>
+            <div id='popup-menu-desk'className={showDeskPopUp?'show-popup':''}>
+                    <div className='container-fluid mobile-popup '>
+                        <div className='row'>
+                            <div className='col mobile-login-section'>
+                                <h3>Email</h3>
+                                <input type="email" name='email-login' id='email-login' />
+                                <h3>Password</h3>
+                                <input type="password" name="password-login" id="password-login" />
+                                <button>Sign in</button>
+                            </div>
+                            <div className='col mobile-sign-up-section'>
+                                <h3>You don't have account yet? </h3>
+                                <a href=""><button>Sign up</button></a>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
             </div>
           )
     }

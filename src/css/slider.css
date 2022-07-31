@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    margin-top: 300px;
+}
+.slider-container {
+    margin: 0;
+    padding: 20px 0px;
+    width: 100%;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s;
+}
+
+.arrows {
+    margin: 0px ;
+    padding: 0px ;
+}
+.arrows button{
+    background:none;
+    border: none;
+    height: 100%;
+    padding: 0px 30px;
+    margin: 0px;
+}
+.arrows img{
+    height: 50px;
+}
+.slider-card{
+    
+    min-height: 600px;
+    
+    border-radius: 25px;
+    padding: 0;
+    overflow: hidden;
+    display: none;
+
+}
+.active-slide{
+    display:flex;
+}
+.slider-card-img-container{
+    padding: 0;
+    
+    min-height: 46vh;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.slider-card-exp-container{
+    
+    /*box-shadow: 0px -25px 20px 10px #DED9E2 , -30px 0px 25px 10px #DED9E2;*/
+    padding: 5vw;
+}
+.slider-card-exp-container h2,.slider-card-exp-container p {
+    font-family: 'Josefin Sans', sans-serif;
+}
+.slider-card-exp-container h2{
+    font-size:calc(15px + 1.5vw);
+    
+    font-weight: bolder;
+    
+}
+.slider-card-exp-container P{
+    font-size:calc(10px + 1vw);
+    
+}
+
+/*boxShadow: '0px -25px 20px 10px ' +dominantColor.hex+' , -30px 0px 25px 10px ' +dominantColor.hex  
+{background: 'linear-gradient(-90deg, '+dominantColor.hex+' 0%, rgb('+(dominantColor.r-25)+','+(dominantColor.g-25)+','+(dominantColor.b-25)+') 35%, rgb('+(dominantColor.r-50)+','+(dominantColor.g-50)+','+(dominantColor.b-50)+') 100%'}*/
