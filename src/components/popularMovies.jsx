@@ -14,7 +14,7 @@ const PopularMovies = () => {
     if(popMovies!=null){
         return (
             <div id='popular-movies'>
-              <h1 >most top rated movies</h1>
+              <h1 >top rated movies</h1>
               <div className='container-fluid  pop-movies-container '>
                 <div className='row flex-row flex-nowrap '>
                     {popMovies.map((movie,index)=>{
