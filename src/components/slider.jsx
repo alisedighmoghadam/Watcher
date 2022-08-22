@@ -84,6 +84,7 @@ const Slider = () => {
               </div>
             </div>
             </div>
+            <hr></hr>
             </>
           )
     }

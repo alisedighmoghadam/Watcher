@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { average } from 'color.js'
+import SliderCardExp from './sliderCardExp';
 const SliderCard = ({data,index,activeSlide,setLoadFromChild}) => {
   
   
@@ -53,6 +54,7 @@ const SliderCard = ({data,index,activeSlide,setLoadFromChild}) => {
     else console.log(error.message);
   });*/
   },[])
+  console.log(data.original_title+'       '+data.overview.length)
   
   
   
@@ -65,9 +67,10 @@ const SliderCard = ({data,index,activeSlide,setLoadFromChild}) => {
               
           </div>
           <div className='slider-card-exp-container col' >
-              
               <h2 style={{color:fontColor?'#DDDDDD':'#292929'}}>{data.original_title}</h2>
-              <p style={{color:fontColor?'#DDDDDD':'#292929'}}>{data.overview}</p>
+             <SliderCardExp text={data.overview} fontColor={fontColor}></SliderCardExp> 
+              {/* <p style={{color:fontColor?'#DDDDDD':'#292929'}}>{data.overview}</p> */}
+              
   
           </div>
         </div>
