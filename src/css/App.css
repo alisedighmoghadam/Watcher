@@ -37,3 +37,13 @@ header {
   width: 100%;
   overflow-x: hidden;
 }
+.center {
+  
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+.loading-logo{
+  height: 600px;
+}

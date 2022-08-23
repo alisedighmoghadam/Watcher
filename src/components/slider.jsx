@@ -59,7 +59,7 @@ const Slider = () => {
     if(movies!=null){
         return (
             <>
-            <div className='center'style={{display:load?'none':'block'}}>
+            <div className='center loading-logo'style={{display:load?'none':'flex'}}>
 
             
                 <BounceLoader color="#C0B9DD" />
@@ -71,6 +71,7 @@ const Slider = () => {
                     <img src={leftArrow} alt="" />
                 </button>
               </div>
+              
                {movies.map((value,index)=>{
                 
                 return <SliderCard data={value} index={index} activeSlide={activeSlide} setLoadFromChild={setLoadFromChild}></SliderCard>
@@ -83,8 +84,9 @@ const Slider = () => {
                     </button>
               </div>
             </div>
-            </div>
             <hr></hr>
+            </div>
+            
             </>
           )
     }

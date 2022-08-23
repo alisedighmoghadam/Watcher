@@ -54,11 +54,27 @@ const SliderCard = ({data,index,activeSlide,setLoadFromChild}) => {
     else console.log(error.message);
   });*/
   },[])
-  console.log(data.original_title+'       '+data.overview.length)
   
   
   
-  if(index===activeSlide){
+  return(
+    
+      <div className={'slider-card container col row '+(index===activeSlide?"active-slide":"")} style={{background: 'linear-gradient(90deg, rgb('+dominantColor.r+','+dominantColor.g+','+dominantColor.b+') 0%,  rgb('+(dominantColor.r-50)+','+(dominantColor.g-50)+','+(dominantColor.b-50)+') 100%'}}>
+          <div className='slider-card-img-container col-lg-3' style={{backgroundImage:"url('https://image.tmdb.org/t/p/original"+data.poster_path+"')"}}>
+            
+              
+          </div>
+          <div className='slider-card-exp-container col' >
+              <h2 style={{color:fontColor?'#DDDDDD':'#292929'}}>{data.original_title}</h2>
+             <SliderCardExp text={data.overview} fontColor={fontColor}></SliderCardExp> 
+              
+              
+  
+          </div>
+        </div>
+    
+  )
+  /*if(index===activeSlide){
     return (
     
         <div className='slider-card container col row active-slide' style={{background: 'linear-gradient(90deg, rgb('+dominantColor.r+','+dominantColor.g+','+dominantColor.b+') 0%,  rgb('+(dominantColor.r-50)+','+(dominantColor.g-50)+','+(dominantColor.b-50)+') 100%'}}>
@@ -69,7 +85,7 @@ const SliderCard = ({data,index,activeSlide,setLoadFromChild}) => {
           <div className='slider-card-exp-container col' >
               <h2 style={{color:fontColor?'#DDDDDD':'#292929'}}>{data.original_title}</h2>
              <SliderCardExp text={data.overview} fontColor={fontColor}></SliderCardExp> 
-              {/* <p style={{color:fontColor?'#DDDDDD':'#292929'}}>{data.overview}</p> */}
+              
               
   
           </div>
@@ -93,7 +109,7 @@ const SliderCard = ({data,index,activeSlide,setLoadFromChild}) => {
         </div>
       
     )
-  }
+  }*/
     
 }
 
