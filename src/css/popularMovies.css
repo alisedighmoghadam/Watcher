@@ -9,9 +9,9 @@ h1{
 }
 .pop-movies-container{
     
-    width:90%;
+    width: 80% !important;
     overflow: hidden;
-    border-radius: 25px;
+    border-radius: 10px;
     padding: 0;
     box-shadow: inset  20px -10px 25px -25px black, inset -20px -10px 25px -25px black,inset -10px 20px 25px -25px black,inset -10px -20px 25px -25px black;
 }

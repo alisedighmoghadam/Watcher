@@ -1,7 +1,9 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
-import PopularMovie from './popularMovie'
+import SmallMovieSlides from './smallMovieSlides'
 import axios from 'axios'
+import LeftArrow from './leftArrow'
+import RightArrow from './rightArrow'
 
 const PopularMovies = () => {
     const [popMovies,setPopMovies]=useState(null);
@@ -11,17 +13,27 @@ const PopularMovies = () => {
             setPopMovies(res.data.results);
         })
     },[]) 
+    function scrollLeft(){
+        
+    }
+    function scrollRight(){
+
+    }
     if(popMovies!=null){
         return (
             <div id='popular-movies'>
               <h1 >top rated movies</h1>
-              <div className='container-fluid  pop-movies-container '>
-                <div className='row flex-row flex-nowrap '>
+              <div className='container-fluid row'>
+              <LeftArrow func={scrollLeft} style={{padding:'0 10px'}}></LeftArrow>
+              <div className='col container-fluid  pop-movies-container '>
+                <div className='row  flex-row flex-nowrap '>
                     {popMovies.map((movie,index)=>{
-                        return <PopularMovie movie={movie} index={index}></PopularMovie>
+                        return <SmallMovieSlides movie={movie} index={index}></SmallMovieSlides>
                     })}
                 </div>
             </div>
+             <RightArrow func={scrollRight} style={{padding:'0 10px'}}></RightArrow> 
+              </div>
               
               
             </div>

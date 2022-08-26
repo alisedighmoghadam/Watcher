@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useState } from 'react'
 
 
-const PopularMovie = ({movie,index}) => {
+const SmallMovieSlides = ({movie,index}) => {
   const [movieTime,setMovieTime]=useState(null);
 
     useEffect(()=>{
@@ -42,4 +42,4 @@ const PopularMovie = ({movie,index}) => {
     
 }
 
-export default PopularMovie
+export default SmallMovieSlides

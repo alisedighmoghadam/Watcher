@@ -4,9 +4,11 @@ import SliderCard from './sliderCard'
 import { useEffect } from 'react';
 import axios from 'axios';
 import {BounceLoader} from 'react-spinners';
+import RightArrow from './rightArrow';
+import LeftArrow from './leftArrow';
 const Slider = () => {
-    var leftArrow=require('../views/Arrow_left.png')
-    var rightArrow=require('../views/Arrow_right.png')
+    
+    
     const [activeSlide,setActiveSlide]=useState(0);
     const [movies,setMovies]=useState(null);
     const [load,setLoad]=useState(false);
@@ -66,23 +68,15 @@ const Slider = () => {
             </div>
             <div style={{display:load?'block':'none'}}>
             <div className='slider-container container-fluid row'>
-              <div className='arrows left-arrow col-auto' >
-                <button onClick={prevSlide}>
-                    <img src={leftArrow} alt="" />
-                </button>
-              </div>
+              <LeftArrow func={prevSlide}></LeftArrow>
               
                {movies.map((value,index)=>{
                 
                 return <SliderCard data={value} index={index} activeSlide={activeSlide} setLoadFromChild={setLoadFromChild}></SliderCard>
               })}  
               
+              <RightArrow func={nextSlide}></RightArrow>
               
-              <div className='arrows right-arrow col-auto'>
-                    <button onClick={nextSlide}>
-                        <img src={rightArrow} alt="" />
-                    </button>
-              </div>
             </div>
             <hr></hr>
             </div>
