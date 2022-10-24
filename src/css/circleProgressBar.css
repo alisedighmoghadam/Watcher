@@ -1,0 +1,30 @@
+:root {
+  --dot-diameter: 380px;
+  --circle-border-width: 2px;
+  --default-color: gainsboro;
+  --completion-color: seagreen;
+}
+
+.circle-container {
+  width: var(--dot-diameter);
+  height: var(--dot-diameter);
+  transform: rotate(-90deg);
+}
+
+.circle-container__background {
+  fill: none;
+  stroke: var(--default-color);
+  stroke-width: var(--circle-border-width);
+}
+
+.circle-container__progress {
+  fill: none;
+  stroke-linecap: round;
+  stroke: var(--completion-color);
+  stroke-dasharray: 100 100;
+  stroke-linecap: round;
+  stroke-width: var(--circle-border-width);
+  
+  transition: stroke-dashoffset 1s ease-in-out;
+  will-change: transform;
+}

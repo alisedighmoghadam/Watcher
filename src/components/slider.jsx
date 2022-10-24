@@ -6,7 +6,7 @@ import axios from 'axios';
 import {BounceLoader} from 'react-spinners';
 import RightArrow from './rightArrow';
 import LeftArrow from './leftArrow';
-const Slider = () => {
+const Slider = ({passMovie}) => {
     
     
     const [activeSlide,setActiveSlide]=useState(0);
@@ -17,10 +17,12 @@ const Slider = () => {
         axios.get('https://api.themoviedb.org/3/movie/now_playing?api_key=3314664ffa608874a6c049e1f7faeb2c&language=en-US&page=1').then(res=>{
              
             setMovies(res.data.results);
+            passMovie(res.data.results);
         })
         
 
     },[]) 
+    
     
     const setLoadFromChild=(index)=>{
         if(index===0){
@@ -58,6 +60,7 @@ const Slider = () => {
             setActiveSlide(movies.length-1)
         }
     }
+    
     if(movies!=null){
         return (
             <>

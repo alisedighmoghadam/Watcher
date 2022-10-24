@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react'
+import CircleProgressBar from './circleProgressBar';
 
 
 const SmallMovieSlides = ({movie,index}) => {
@@ -32,6 +33,7 @@ const SmallMovieSlides = ({movie,index}) => {
                 <div className='pop-movie-card-info'>
                   <h6>{movie.title}</h6>
                   <p>{calcTime()} - {movieTime.genres[0].name}</p>
+                  {/*<CircleProgressBar></CircleProgressBar>*/}
                 </div>
                 
               </div>
