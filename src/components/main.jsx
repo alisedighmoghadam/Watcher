@@ -5,6 +5,7 @@ import { useState } from 'react'
 import PopularMovies from './popularMovies'
 import Slider from './slider'
 import SuggestionOfDay from './suggestionOfDay'
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);

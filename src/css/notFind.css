@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+.not-find-container{
+	margin: auto;
+    padding: 30px;
+	padding-top: 150px;
+	height: 700px;
+	background: linear-gradient(50deg, #c0b9dd,#035c7d,#00222c);
+	
+	
+}
+
+.warning-triangle {
+	
+	width: 360px;
+	height: 350px;
+	
+	position:absolute;
+	background-color: orange;
+	
+	background: linear-gradient(225deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    -webkit-mask-image: url("../views/warning_triangle.png");
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: 210px 200px;
+	mask-image: url("../views/warning_triangle.png");
+	mask-repeat:no-repeat ;
+	mask-size: 360px 350px;
+	
+}	
+.warning-triangle-symbol img{
+	width: 340px;
+	height: 330px;
+	position: relative;
+	left: 50px;
+	top:35px
+}
+.not-find-exp{
+	float: right;
+	text-align: right;
+	padding: 0px 30px;
+}
+.not-find-exp h2,.not-find-exp p{
+	color: white;
+	font-family: 'Josefin Sans', sans-serif
+
+}
+.not-find-exp p{
+	font-size: 40px;
+}
+.not-find-exp h2{
+	font-weight: 900;
+	font-size: 200px;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.warning-triangle-container{
+	position: relative;
+}

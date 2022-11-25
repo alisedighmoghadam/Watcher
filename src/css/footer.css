@@ -1,0 +1,19 @@
+.footer{
+    position:absolute;
+    display: block;
+    width: 100%;
+    
+    padding: 80px;
+}
+.tmdb-logo-container{
+
+}
+.tmdb-logo-container h3{
+    color: white;
+    margin-left: 5px;
+}
+.tmdb-logo-container img{
+    background-color: #0d253f;
+    padding: 12px;
+    border-radius: 10px;
+}

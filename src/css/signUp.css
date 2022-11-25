@@ -1,0 +1,19 @@
+.sign-up-container{
+    padding-top: 70px;
+    width:fit-content;
+    
+    align-items: center;
+    justify-content: center;
+}
+.sign-up-container div{
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    
+}
+.sign-up-container h2, .sign-up-container label{
+    color: white;
+}
+.field-container{
+    margin:10px 0px ;
+}
