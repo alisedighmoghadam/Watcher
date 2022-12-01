@@ -5,6 +5,9 @@
     
     padding: 80px;
 }
+.footer hr{
+    width: 100%;
+}
 .tmdb-logo-container{
 
 }

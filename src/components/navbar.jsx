@@ -182,7 +182,7 @@ const Navbar = () => {
               </div>
               <div className="col mobile-sign-up-section">
                 <h3>You don't have account yet? </h3>
-                <a href="">
+                <a href="/signup">
                   <button>Sign up</button>
                 </a>
               </div>
