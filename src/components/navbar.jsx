@@ -108,9 +108,9 @@ const Navbar = () => {
               </div>
               <div className="col mobile-sign-up-section">
                 <h3>You don't have account yet? </h3>
-                <a href="">
+                <Link to="/signup">
                   <button>Sign up</button>
-                </a>
+                </Link>
               </div>
             </div>
             <hr />
@@ -182,9 +182,9 @@ const Navbar = () => {
               </div>
               <div className="col mobile-sign-up-section">
                 <h3>You don't have account yet? </h3>
-                <a href="/signup">
+                <Link to="/signup">
                   <button>Sign up</button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

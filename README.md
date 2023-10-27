@@ -2,7 +2,7 @@
 
 # Watcher
 
-A simple subscription streaming service replica. Personal project. (In developing process)
+A work-in-progress personal project replicating a simple subscription-based streaming service. Feel free to explore the current live version of the front-end here: [Watcher front-end](https://alisedighmoghadam.github.io/Watcher)
 
 # Screenshots
 
